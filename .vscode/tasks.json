@@ -1,0 +1,44 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: Build with Libraries",
+            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-I",
+                "${workspaceFolder}/library - libharu/include",
+                "-I",
+                "${workspaceFolder}/library - lpng",
+                "-I",
+                "${workspaceFolder}/library - zlib",
+                "-L",
+                "${workspaceFolder}/library - libharu/src",
+                "-L",
+                "${workspaceFolder}/library - lpng",
+                "-L",
+                "${workspaceFolder}/library - zlib",
+                "-lhpdf",
+                "-lpng16",
+                "-lzlib",
+                "-lgdi32"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "compiler: C:\\msys64\\ucrt64\\bin\\g++.exe"
+        }
+    ]
+}
